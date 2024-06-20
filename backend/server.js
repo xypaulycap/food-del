@@ -7,9 +7,15 @@ import "dotenv/config";
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
 
+console.log('Environment Variables:', process.env.PORT, process.env.MONGO_URI);
+
 //app config
 const app = express();
 const port = process.env.PORT || 4000;
+
+console.log('Starting server...');
+console.log('Port:', process.env.PORT);
+
 
 //middleware
 app.use(express.json());
