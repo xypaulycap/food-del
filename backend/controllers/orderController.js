@@ -5,11 +5,12 @@ import Stripe from "stripe"
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
+const frontend_url = "https://food-del-frontend-ha98.onrender.com/"
 
-//placing user order from frontend
+
+//placing user order from frontend using stripe
 const placeOrder = async(req,res) => {
 
-  const frontend_url = "http://localhost:5173"
 
   try {
     const newOrder = new orderModel({
